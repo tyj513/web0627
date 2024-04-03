@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+
+	<meta charset="utf-8">
+	<title>資工所考試回顧(建議用電腦看)</title>
+
+	<link rel="stylesheet" href="style.css">
+	<script def er src="index.js"></script>
+	<!--<link rel="stylesheet" media="screen and (min-width: 400px) and (max-width: 700px)" href="style.css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+-->
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		.white-text {
+			color: white;
+			font-size: 14px;
+			/* 調整字體大小為14像素 */
+
+		}
+	</style>
+	<script>
+		window.onload = function () {
+			let 瀏覽次數 = localStorage.getItem('瀏覽次數_page1') ? parseInt(localStorage.getItem('瀏覽次數_page1')) : 0;
+			瀏覽次數++;
+			localStorage.setItem('瀏覽次數_page1', 瀏覽次數);
+			document.getElementById('瀏覽次數').innerText = '瀏覽次數：' + 瀏覽次數;
+		}
+	</script>
+	<script>
+		$(document).ready(function () {
+			if (IsPC()) {
+				function detectZoom() {
+					var ratio = 0,
+						screen = window.screen,
+						ua = navigator.userAgent.toLowerCase();
+
+					if (ua.indexOf('firefox') != -1) {
+						if (window.devicePixelRatio !== undefined) {
+							ratio = window.devicePixelRatio;
+						}
+					} else if (ua.indexOf('msie') != -1) {
+						if (screen.deviceXDPI && screen.logicalXDPI) {
+							ratio = screen.deviceXDPI / screen.logicalXDPI;
+						}
+					} else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
+						ratio = window.outerWidth / window.innerWidth;
+					}
+					return ratio;
+				}
+
+				function adjustPageZoom() {
+					var zoomRatio = detectZoom();
+					var string = 1.26 / zoomRatio; // Calculate the adjusted zoom ratio
+					document.body.style.zoom = string;
+				}
+
+				function askUserToAdjustZoom() {
+					var currentZoom = detectZoom();
+					if (currentZoom !== 1.25) {
+						adjustPageZoom();
+					}
+				}
+
+				window.onload = askUserToAdjustZoom;
+				var content = document.getElementById("content");
+				content.style.width = "850px";
+				content.style.margin = "0 auto";
+
+
+				var imgElement3 = document.querySelector('.style1');
+
+				if (imgElement3) {
+
+					imgElement3.style.letterSpacing = '25px';
+					imgElement3.style.fontSize = '40px';
+
+				}
+			} else {
+
+
+
+			}
+		});
+
+		function IsPC() {
+			var userAgentInfo = navigator.userAgent;
+			var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+			var flag = true;
+			for (var v = 0; v < Agents.length; v++) {
+				if (userAgentInfo.indexOf(Agents[v]) > 0) {
+					flag = false;
+					break;
+				}
+			}
+			return flag;
+		} 
+	</script>
+
+
+	<style>
+		#left_side {
+			position: absolute;
+
+			float: left;
+			width: 100px;
+			left: 0px;
+		}
+
+		#right_side {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 180px;
+		}
+	</style>
+	<style>
+		#pic {
+			width: 15%;
+		}
+	</style>
+	<style type="text/css">
+		.style1 {
+			font-size: 2.7em;
+			font-weight: bold;
+		}
+
+		.style2 {
+			font-size: 1.2em;
+			color: white
+		}
+
+		.style3 {
+			font-size: 1.65em
+		}
+	</style>
+	<style>
+		.shadow-text {
+			text-shadow: 0px 0px 1px #4d4d4d;
+		}
+	</style>
+
+	<style>
+		/* 將文本顏色設置為灰色 */
+		.grey-text {
+			color: rgba(255, 255, 255, 0.943);
+		}
+
+		article {
+			text-align: center;
+			/* This will center the text horizontally within the <p> element */
+		}
+	</style>
+
+</head>
+
+<body onload="askUserToAdjustZoom()">
+
+	<div id="left_side">
+		<img class="left-top" src="jpg/81.jpg">
+		<p style="margin-top: 120px; color: lightskyblue; writing-mode: vertical-rl; writing-mode: vertical-rl; ;">
+			魔鬼藏在細節裡 真的不要鬼遮眼</p>
+	</div>
+
+
+	<div id="content">
+
+		<div id="intro">
+			<h1 class="style1">資工所考試回顧</h1>
+		</div>
+
+
+
+
+		<nav>
+			<ul>
+				<li><a href="https://tyj513.github.io/graduatenotalone/index.html" onclick="點擊計數();"> 首頁</a></li>
+				<li><a href="https://tyj513.github.io/graduatenotalone/share/share2.html" onclick="點擊計數();">九陽真經
+					</a></li>
+				<li><a href="https://tyj513.github.io/graduatenotalone/thank/thank.html" onclick="點擊計數();">感謝的人</a></li>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<article>
+				<section>
+					<h4>簡章</h4>
+					<p>
+						明年年後考試 各位辛苦了 </p>
+					<p> 中央的考試時間可以看育達高中的行事曆 大概暑假那時就會公布<a href="https://yd-main.web.app/main/pages/calendar">link</a></p>
+					<p>中山的考試時間要看【當年度教務行事曆】 <a href="https://oaa.nsysu.edu.tw/p/412-1003-98.php?Lang=zh-tw">link</a></p>
+					<p>交大、成大就只能通靈</p>
+					<p> 清大則是會公布在行事曆上 已經出來6號.7號
+						<a href="https://dgaa.site.nthu.edu.tw/var/file/209/1209/img/275/784811910.pdf">link</a>
+					</p>
+					<p> 台大基本上會第一個出來通常都會在假日 所以台大應該會在8號.9號
+					</p>
+					<br>
+				</section>
+				<section>
+					<h4>訂房</h4>
+					<p>
+						推清齋十樓 <a href="https://affairs-guesths.vm.nthu.edu.tw/guest10/">link</a>
+					</p>
+					<p> 大推清齋會館 <a href="https://affairs-guesths.vm.nthu.edu.tw/">link</a>
+					</p>
+					<p class="grey-text">
+
+						在下寫的 <a href="https://tyj513.github.io/web0627/code.html" style="   color: rgba(255, 255, 255, 0.943);">code</a> 雖然那時一開始還是沒有搶到
+					</p>
+				</section>
+				<section>
+					<h4>成大教授</h4>
+					<p>
+						<strong>黃崇明</strong><br>
+						碩一修課 報paper<br>
+						碩二 論文<br>
+						一周一次group meeting<br>
+						碩二 會多1-1的meeting<br>
+						研究主題老師分<br>
+						要會維護web
+					</p>
+					<p>
+						<strong>許舒涵</strong><br>
+						實驗室在老師辦公室旁邊<br>
+						學長十分親民，有甚麼問題盡量問<br>
+						跟老師面談vibe很喜歡 但也以為<br>
+						研究主題主要做ai相關 但內容較廣 比較偏向自己想<br>
+						都用Line聯繫 不會group meeting因為老師覺得沒效率<br>
+						兩年會放人 
+
+					</p>
+					<p>
+						<strong>詹慧伶 </strong><br>
+
+						在保羅實驗室有遇到這間實驗室的學長 <br>
+						他說老師人也蠻好的 推推<br>
+
+					</p>
+					<p>
+						<strong>盧文祥 </strong><br>
+
+						在教授實驗室面談了快3小時<br>
+						老師很熱心地展現學生的成果<br>
+						很像爸爸在宣揚自己小孩的成果<br>
+						做NLP/語音合成.辨識 <br>
+						人數基本上抓2:1
+
+					</p>
+					<p>
+						<strong>蔣榮先</strong><br>
+						跟醫院合作居多 偏操<br>
+						碩二<br>
+					<p> a.跟一位學姊跟醫生合作做腎臟數值相關的 v</p>
+					<p> b.國外切片影像</p>
+					<p> c.越南學姊 llm prompt v</p>
+					<p> d.跟慈濟醫院合作 ct影像 資料生成 v</p>
+
+					<p><strong>v</strong>是未來應該會繼續做下去的內容</p>
+					<p>碩一越南學長在做跟文字相關的</p>
+					<p>博班學姊說教授雙子座 個性溫文儒雅</p>
+					<p>碩一 修課 計畫</p>
+					<p>碩二 題目可由計畫延伸或新的</p>
+					<p>meeting 2次 1下group</p>
+					<p>禮拜五 seminar 報paper</p>
+					<p>薪水6000</p>
+					<p>碩二可能會增加</p>
+					</p>
+
+					<p>
+						<strong>何建忠</strong><br>
+						聽學長說應該蠻涼的 但已經蠻多人去找了 應該也滿了<br>
+						meeting 1周一次 讀書會<br>
+						題目自己想 or延續學長姐
+					</p>
+
+					<p>
+						<strong>張燕光</strong><br>
+						2meeting<br>
+						禮拜三不要排課 因為要報paper group線上<br>
+						paper找自己喜歡的內容但研究內容不要差太多<br>
+						可能會接助教<br>
+						題目主要是自己想<br>
+						研究內容:packet分類/sdn/fpg
+					</p>
+
+					<p>
+						<strong>王士豪</strong><br>
+						醫學影像<br>
+						機器學習<br>
+						實驗室氣氛不錯<br>
+						晚上group meeting 基本2-3hr<br>
+						題目做生醫相關<br>
+						從計畫衍伸到論文<br>
+						沒雜事 兩年畢<br>
+						有一門規定要修 上下學期的
+					</p>
+
+					<p>
+						<strong>許靜芳</strong><br>
+						題目自己想 沒有錢 做vlc 可見光<br>
+						可能會擔任助教
+					</p>
+
+					<p>
+						<strong>蘇文鈺</strong><br>
+						老師實驗室很多黑膠 真的感受到老師很愛音樂<br>
+						做軟體simulation 系統整合現有的open source<br>
+						也會做實體機器人<br>
+						不會接計畫<br>
+						用unity 要會c++ py<br>
+						老師主要是會分派學生要做的內容<br>
+						2年就一定會放人 因為老師也沒論文kpi壓力
+					</p>
+
+					<p>
+						<strong>賀保羅</strong><br>
+						題目也主要自己想 老師不太管<br>
+						實驗室超級無敵歡樂 逛起來最HAPPY的 <br>
+						但保羅其實會挑學生<br>
+
+					</p>
+
+					<p>
+						<strong>曾繁勛</strong><br>
+						行動網路 可能會擔任助教 大課<br>
+					</p>
+					<p>
+						<strong>英超 培殷</strong><br>
+						做硬體<br>
+
+					</p>
+					<p>
+						多找幾個教授聽 即使你沒有要去還是可以聽看看<br>
+						 反正之後也可能修到某位教授的課<br>
+						  主要是看實驗室研究領域跟氛圍是否合你的意<br>
+						祝找教授順利啦<br>
+						也很恭喜你發現這個隱藏(?)網站 <br>
+						不知道你還有沒有發現其他的小彩蛋哈哈<br>
+					</p> 
+				</section>
+			</article>
+
+		</main>
+		<footer>
+
+			<div>Website visit count:</div>
+			<div id="sfc2lzecxmfdfhbflcbduttzbwal2j3p6ua"></div><script type="text/javascript" src="https://counter11.optistats.ovh/private/counter.js?c=2lzecxmfdfhbflcbduttzbwal2j3p6ua&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="web counter"><img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=2lzecxmfdfhbflcbduttzbwal2j3p6ua" border="0" title="web counter" alt="web counter"></a></noscript>
+			<p>Ty513</p>
+
+		</footer>
+	</div>
+
+
+	<div id="right_side">
+		<img class="right-top" src="jpg/13.jpg">
+	</div>
+</body>
+
+</html>
